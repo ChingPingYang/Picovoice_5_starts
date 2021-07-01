@@ -26,9 +26,11 @@ const readFile = async (path: string) => {
   }
 };
 
-// @route   GET api/product
-// @desc    Get all products
-// @access  Public
+/**
+ * @route   GET api/product
+ * @desc    Get all products
+ * @access  Public
+ */
 router.get("/", async (req: any, res: any) => {
   try {
     const products = await readFile(
@@ -40,6 +42,11 @@ router.get("/", async (req: any, res: any) => {
   }
 });
 
+/**
+ * @route   PUT api/product
+ * @desc    For admin to update old product
+ * @access  Private
+ */
 // @route   PUT api/product
 // @desc    For admin to update old product
 // @access  Private
